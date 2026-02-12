@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dunder Mifflin - Un mensaje especial</title>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&family=Inter:wght@400;700&family=Special+Elite&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --dm-blue: #005fa9;
+            --dm-gray: #e5e5e5;
+            --dm-yellow: #fdb927;
+            --paper-white: #f9f9f9;
+        }
+
+        body {
+            background-color: #d1d8e0;
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #333;
+        }
+
+        /* Header estilo The Office */
+        header {
+            background-color: white;
+            width: 100%;
+            padding: 20px 0;
+            border-bottom: 4px solid var(--dm-blue);
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            font-weight: 900;
+            font-size: 1.5rem;
+            letter-spacing: -1px;
+            color: #444;
+        }
+        .logo span {
+            color: var(--dm-blue);
+        }
+
+        /* Contenedor Principal */
+        .container {
+            max-width: 800px;
+            width: 90%;
+            margin: 40px 0;
+            position: relative;
+        }
+
+        /* Reproductor de Música */
+        .music-card {
+            background: #333;
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .music-info {
+            flex-grow: 1;
+        }
+
+        .music-info h3 { margin: 0; color: var(--dm-yellow); font-size: 1.1rem; }
+        .music-info p { margin: 5px 0 0; opacity: 0.8; font-size: 0.9rem; }
+
+        /* Estilo del Mensaje (Memorándum) */
+        .memo-container {
+            background-color: var(--paper-white);
+            padding: 60px;
+            box-shadow: 10px 10px 0px rgba(0,0,0,0.05);
+            border: 1px solid #ddd;
+            position: relative;
+            background-image: radial-gradient(#d1d1d1 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+
+        .memo-header {
+            border-bottom: 2px solid #333;
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+            font-family: 'Courier Prime', monospace;
+        }
+
+        .memo-title {
+            font-size: 2rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin: 0;
+        }
+
+        .letter-body {
+            font-family: 'Special Elite', cursive;
+            line-height: 1.8;
+            font-size: 1.1rem;
+            color: #222;
+            white-space: pre-wrap;
+        }
+
+        /* Post-it */
+        .sticky-note {
+            background: #ff7;
+            padding: 20px;
+            width: 200px;
+            position: absolute;
+            right: -50px;
+            top: -20px;
+            transform: rotate(5deg);
+            box-shadow: 5px 5px 10px rgba(0,0,0,0.1);
+            font-family: 'Courier Prime', monospace;
+            font-size: 0.9rem;
+            border-bottom-right-radius: 30px 5px;
+            display: none; /* Se activa en pantallas grandes */
+        }
+
+        @media (min-width: 1200px) {
+            .sticky-note { display: block; }
+        }
+
+        /* Dundie Award Section */
+        .dundie-section {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .dundie-award {
+            width: 150px;
+            transition: transform 0.3s;
+        }
+        .dundie-award:hover {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        footer {
+            margin: 40px 0;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #666;
+            font-family: 'Courier Prime', monospace;
+        }
+
+        /* Animación suave */
+        .fade-in {
+            animation: fadeIn 2s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        iframe {
+            border-radius: 12px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">DUNDER <span>MIFFLIN</span> PAPER COMPANY</div>
+        <div style="font-size: 0.7rem; letter-spacing: 2px;">SCRANTON BRANCH</div>
+    </header>
+
+    <div class="container fade-in">
+        
+        <!-- Sección de Música -->
+        <div class="music-card">
+            <div class="music-info">
+                <h3>Escuchando: Veneno</h3>
+                <p>Gera MX</p>
+            </div>
+            <!-- He puesto un embed de YouTube. Puedes cambiar el ID si lo deseas -->
+            <iframe width="100%" height="80" src="https://www.youtube.com/embed/P_P_K5071p8?si=N-A-Kj8BExx0NUnw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+
+        <!-- El Mensaje Especial -->
+        <div class="memo-container">
+            <div class="sticky-note">
+                "That's what she said" <br><br>
+                - Michael Scott
+            </div>
+
+            <div class="memo-header">
+                <p><strong>DE:</strong> Alguien que te admira</p>
+                <p><strong>PARA:</strong> La persona más especial</p>
+                <p><strong>ASUNTO:</strong> Gracias por existir</p>
+            </div>
+
+            <div class="memo-title">MEMORÁNDUM</div>
+            
+            <div class="letter-body">
+Quiero empezar diciendo gracias, pero siento que esa palabra se queda pequeña para todo lo que significa en mi vida. Gracias por llegar, por quedarte, por abrazar mis días buenos y no soltarme en los malos. 
+
+Gracias por tu paciencia cuando me pierdo en mis pensamientos, por tu comprensión cuando no sé cómo explicar lo que siento, por tu forma tan tuya de sostenerme sin hacer ruido. Eres una persona maravillosa, de esas que no solo pasan por la vida de alguien, sino que dejan huella. Tienes una luz propia, una manera especial de mirar el mundo, una sensibilidad que se siente genuina. 
+
+Hay algo en ti que transmite calma, que inspira confianza, que hace que uno quiera quedarse un rato más, escucharte un poco más, compartir un poco más. Disfruto profundamente de tu compañía. Disfruta de tus risas, tus historias, incluso tus silencios. Disfruta de la manera en que el tiempo parece ir más despacio cuando estamos juntos, como si el mundo entendiera que ese momento es importante.
+
+Contigo, lo simple se vuelve especial. Una conversación cualquiera se convierte en recuerdo, una tarde normal se transforma en algo que guardo en el corazón. Admiro tu forma de ser, tu fuerza aunque a veces no la veas, tu corazón tan grande que siempre encuentra espacio para los demás. Admiro tus sueños, tus ideas, tu manera de sentir tan intensa y tan auténtica. 
+
+Eres más de lo que crees, más de lo que imaginas, más de lo que a veces te reconoces. Gracias por existir en mi vida. Gracias por cada instante compartido, por cada aprendizaje, por cada emoción que despiertas en mí. Si alguna vez dudas de lo importante que eres, recuerda esto: hay alguien aquí que agradece tu presencia todos los días y que ama la suerte de poder coincidir contigo en este pedicito de vida.
+            </div>
+        </div>
+
+        <!-- Sección Dundie -->
+        <div class="dundie-section">
+            <img src="https://cdn-icons-png.flaticon.com/512/5833/5833891.png" alt="Dundie" class="dundie-award">
+            <p style="font-family: 'Courier Prime'; margin-top: 10px;">Ganadora del Dundie a: <br> <strong>"La mejor persona del mundo"</strong></p>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>© Dunder Mifflin Paper Company, Inc. | "Limitless Paper in a Paperless World"</p>
+    </footer>
+
+</body>
+</html>
